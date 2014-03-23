@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ post["username"] }}'s Post {% endblock %}
+{% block title_path %}{{ post["username"] }}'s Post {% endblock %}
+{% block content %}
+{% if "username" in session and session["username"] == post["username"] %}
+    <form action="{{ url_for('edit_post') }}" style="display:inline" method="POST">
+        <input type="hidden" name="post_id" value="{{ post['id'] }}" />
+        <input type="submit" style="display:inline" value="Edit" />
+    </form>
+    <form action="{{ url_for('delete_post') }}" style="display:inline" method="POST">
+        <input type="hidden" name="id" value="{{ post['id'] }}" />
+        <input type="submit" style="display:inline" value="Delete" />
+    </form>
+{% endif %}
+<h1>{{ post["date"] }}</h1>
+<p>{{ post["comment"] }}</p>
+{% endblock %}

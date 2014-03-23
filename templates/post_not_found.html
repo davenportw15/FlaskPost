@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Post {{ id }} Not Found{% endblock %}
+{% block title_path %}Post Not Found{% endblock %}
+{% block content %}
+<p>Post {{ id }} could not be found. This may mean:</p>
+<ul>
+    <li>Post {{ id }} has been deleted</li>
+    <li>Post {{ id }} has not yet been created</li>
+</ul>
+{% endblock %}

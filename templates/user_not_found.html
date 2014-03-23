@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}User {{ username }} Not Found{% endblock %}
+{% block title_path %}User Not Found{% endblock %}
+{% block content %}
+<p>The user {{ username }} could not be found. This could mean:</p>
+<ul>
+    <li>{{ username }} has deleted his or her account</li>
+    <li>You have typed the URL incorrectly</li>
+</ul>
+{% endblock %}

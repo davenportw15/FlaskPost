@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found{% endblock %}
+{% block title_path %}Page Not Found {% endblock %}
+{% block content %}
+<p>We could not locate the page {{ request.path }}. This may mean that:</p>
+<ul>
+    <li>You typed the URL incorrectly</li>
+    <li>The server encountered an error</li>
+</ul>
+{% endblock %}

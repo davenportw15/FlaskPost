@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Users{% endblock %}
+{% block title_path %}Users{% endblock %}
+{% block content %}
+<form action="/search_user" method="POST">
+    <input type="text" name="username" placeholder="Search Username" style="display:inline" />
+    <input type="submit" value="Search" style="display:inline" />
+</form>
+<table id="user_list" style="width:230px">
+{% for user in users.list_users() %}
+<tr>
+    <td><a class="username" href="/user/{{ user }}">{{ user }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

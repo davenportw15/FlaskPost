@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %} | FlaskPost</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        <!-- <script type="text/javascript" src="/javascript/jQuery.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <script type="text/javascript">
+        </script>
+        <style type="text/css">
+            {% block css %}{% endblock %}
+        </style>
+    </head>
+    <body>
+        <div id="navigation_bar_wrapper">
+            <div id="navigation_bar">
+                <p id="site_title">FlaskPost &gt; {% block title_path %}{% endblock %}</p>
+                <span id="navigation_buttons">
+                    {% if "username" in session %}
+                        <span class="navigation_link"><a href="{{ url_for('me') }}">{{ session["username"] }}</a></span>
+                        <span class="navigation_link"><a href="{{ url_for('new_post') }}">New Post</a></span>
+                        <span class="navigation_link"><a href="{{ url_for('login') }}">Logout</a></span>
+                    {% elif request.path == "/login" %}
+                        <span class="navigation_link"><a href="{{ url_for('new_user') }}">New User</a></span>
+                    {% else %}
+                        <span class="navigation_link"><a href="{{ url_for('login') }}">Login</a></span>
+                    {% endif %}
+                    <span class="navigation_link"><a href="{{ url_for('list_users') }}">Users</a></span>
+                    <span class="navigation_link"><a href="{{ url_for('about') }}">About</a></span>
+                </span>
+            </div>
+        </div>
+        <div id="content_wrapper">
+            <div id="content">
+                {% with messages = get_flashed_messages() %}
+                    {% for message in messages %}
+                        <p class="message">{{ message }}</p>
+                    {% endfor %}
+                {% endwith %}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

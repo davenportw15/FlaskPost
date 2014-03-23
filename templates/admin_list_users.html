@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Administration{% endblock %}
+{% block title_path %}Administration{% endblock %}
+{% block content %}
+<h1>Users</h1>
+<table id="user_list">
+    {% for user in users.list_users() %}
+    <tr>
+        <td>{{ user }}</td>
+        <td>
+            <form action="{{ url_for('delete_user') }}" method="POST">
+                <input type="hidden" name="username" value="{{ user }}" />
+                <input type="submit" value="Delete" />
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

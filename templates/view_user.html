@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block title_path %}{{ username }} {% endblock %}
+{% block content %}
+{% if not posts.list_posts_by_username(username) %}
+    <p id="no_posts">No posts to display...</p>
+{% else %}
+    {% for post in posts.list_posts_by_username(username) %}
+            <a href="{{ url_for('view_post', post_number=post['id']) }}">
+                <div class="card">
+                    <h1>{{ post["date"] }}</h1>
+                    <p>{{ post["comment"] }}</p>
+                </div>
+            </a>
+    {% endfor %}
+{% endif %}
+{% endblock %}

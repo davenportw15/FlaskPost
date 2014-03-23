@@ -1,0 +1,235 @@
+body {
+    background-color:rgb(248,248,248);
+}
+
+a {
+    text-decoration:none;
+}
+
+p {
+    font-family:sans-serif;
+    color:rgb(30,30,30);
+    font-size:12pt;
+}
+
+#navigation_bar_wrapper {
+    display:block;
+    margin:0 auto;
+    width:96%;
+    height:60px;
+    background-color:rgb(80,80,80);
+}
+
+#navigation_bar {
+    display:block;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+#site_title {
+    display:inline-block;
+    font-family:sans-serif;
+    font-size:20pt;
+    color:rgb(230,230,230);
+    position:relative;
+    left:0px;
+    bottom:12px;
+}
+
+#navigation_buttons  {
+    display:inline-block;
+    float:right;
+    position:relative;
+    left:0px;
+    top:16px;
+}
+
+#content_wrapper {
+    display:block;
+    margin:0 auto;
+    width:96%;
+}
+
+#content {
+    background-color:rgb(253,253,253);
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-left:2px rgb(200,200,200) solid;
+    border-right:2px rgb(200,200,200) solid;
+    border-bottom:2px rgb(200,200,200) solid;
+}
+
+input, button, textarea {
+    margin-bottom:5px;
+}
+
+input[type="submit"], button {
+    display:block;
+    background:linear-gradient(rgb(120,200,255), rgb(20,90,160));
+    color:rgb(255,255,255);
+    font-family:sans-serif;
+    font-size:11pt;
+    border:1px rgb(10,80,140) solid;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:4px;
+    padding-bottom:4px;
+    cursor:pointer;
+    outline:none;
+    box-shadow:0px 0px 0px rgb(130,130,130) inset;
+}
+
+input[type="submit"]:hover, button:hover {
+    box-shadow:0px 0px 5px rgb(110,110,110) inset;
+}
+
+input[type="submit"]:active, button:active {
+    background:linear-gradient(rgb(20,90,160), rgb(80,160,215));
+}
+
+.navigation_link {
+    display:inline-block;
+    background-color:rgb(120,120,120);
+    border:1px rgb(60,60,60) solid;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:4px;
+    padding-bottom:4px;
+    outline:none;
+    box-shadow:0px 0px 3px rgb(90,90,90) inset;
+}
+
+.navigation_link:hover {
+    background-color:rgb(130,130,130);
+    box-shadow:0px 0px 6px rgb(90,90,90) inset;
+}
+
+.navigation_link a {
+    color:rgb(230,230,230);
+    font-family:sans-serif;
+    font-size:11pt;
+    cursor:pointer;
+}
+
+input[type="text"], input[type="password"] {
+    background-color:rgb(253,253,253);
+    display:block;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border:1px rgb(160,160,160) solid;
+    outline:none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    box-shadow:0px 0px 3px rgb(70,80,130) inset;
+}
+
+.message {
+    font-family:sans-serif;
+    font-size:12pt;
+    font-style:italic;
+    color:rgb(80,80,80);
+}
+
+textarea {
+    background-color:rgb(253,253,253);
+    display:block;
+    width:240px;
+    height:160px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border:1px rgb(160,160,160) solid;
+    outline:none;
+}
+
+textarea:focus {
+    box-shadow:0px 0px 3px rgb(70,80,130) inset;
+}
+
+h1 {
+    font-family:sans-serif;
+    color:rgb(40,40,40);
+    font-size:20pt;
+}
+
+.card {
+    display:block;
+    background-color:rgb(254,254,254);
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+    padding-left:10px;
+    margin-bottom:10px;
+    border:1px rgb(200,200,200) solid;
+    font-family:sans-serif;
+    box-shadow:0px 4px 5px -5px rgb(10,10,10);
+}
+
+.card h1 {
+    font-size:18pt;
+    color:rgb(60,60,60);
+}
+
+.card p {
+    color:rgb(70,70,70);
+}
+
+#find_user {
+    display:inline-block;
+    background-color:rgb(120,120,120);
+    border:1px rgb(60,60,60) solid;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    outline:none;
+}
+
+#find_user:focus {
+    box-shadow:0px 0px 3px rgb(70,70,70) inset;
+}
+
+#user_list {
+    background-color:rgb(252,252,252);
+    border:1px rgb(200,200,160) solid;
+}
+
+#user_list td {
+    font-size:12pt;
+    font-family:sans-serif;
+    color:rgb(50,50,50);
+    padding:5px;
+}
+
+#no_posts {
+    color:rgb(120,120,120);
+    text-align:center;
+    font-style:italic;
+}
+
+li {
+    color:rgb(30,30,30);
+    font-family:sans-serif;
+    font-size:12pt;
+}
+
+.about_link, .username {
+    color:rgb(25,90,205);
+}
+
+.about_link:hover, .username:hover {
+    text-decoration:underline;
+}
+
+.about_link:visited, .username:visited {
+	color:rgb(25,90,205);
+}
